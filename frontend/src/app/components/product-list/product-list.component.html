@@ -1,0 +1,64 @@
+<div class="app-container">
+  <div class="page-header">
+    <div>
+      <h1 class="gradient-text">Product Catalog</h1>
+      <p class="page-subtitle">Browse and order products from our catalog</p>
+    </div>
+    <div class="category-filter">
+      <label>Category:</label>
+      <select [(ngModel)]="selectedCategory" (change)="onCategoryChange()" class="input-field" style="max-width: 250px;">
+        <option value="all">All Categories</option>
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="error" class="alert error">{{ error }}</div>
+
+  <div *ngIf="loading" class="loading">
+    <div class="spinner"></div>
+    <p style="margin-top: 1rem; color: var(--gray-500);">Loading products...</p>
+  </div>
+
+  <div class="product-grid" *ngIf="!loading">
+    <div class="product-card fade-in" *ngFor="let product of filteredProducts">
+      <div class="product-image">
+        <img *ngIf="product.imageUrl" [src]="product.imageUrl" [alt]="product.name" />
+        <div *ngIf="!product.imageUrl" class="placeholder">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 3rem; height: 3rem; color: var(--gray-400);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+        <p class="product-price">KSh {{ usdToKsh(product.price) }}</p>
+        <p class="product-stock" [class.low-stock]="product.stock < 5">
+          Stock: {{ product.stock }}
+        </p>
+        <p class="product-category">{{ product.category }}</p>
+
+        <div class="order-section">
+          <label>Email:</label>
+          <input type="email" [(ngModel)]="orderEmail" placeholder="your@email.com" class="input-field" *ngIf="orderProductId === product.id">
+          <label>Qty:</label>
+          <input type="number" [(ngModel)]="orderQuantity" min="1" [max]="product.stock" class="input-field" *ngIf="orderProductId === product.id">
+          <button *ngIf="orderProductId !== product.id" class="btn-order" (click)="startOrder(product)">Order</button>
+          <button *ngIf="orderProductId === product.id" class="btn-order" (click)="placeOrder()" [disabled]="ordering">Place Order</button>
+          <button *ngIf="orderProductId === product.id" class="btn-cancel" (click)="cancelOrder()">Cancel</button>
+        </div>
+
+        <div *ngIf="orderError" class="alert error">{{ orderError }}</div>
+        <div *ngIf="orderSuccess && orderProductId === product.id" class="alert success">{{ orderSuccess }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="filteredProducts.length === 0 && !loading" class="empty-state">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 4rem; height: 4rem; color: var(--gray-400); margin-bottom: 1rem;">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+    </svg>
+    <p style="color: var(--gray-500); font-size: 1.125rem;">No products available</p>
+  </div>
+</div>
