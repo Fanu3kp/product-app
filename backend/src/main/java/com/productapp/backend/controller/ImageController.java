@@ -15,7 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @RestController
-@RequestMapping("/uploads")
+@RequestMapping("/api/images")
 public class ImageController {
 
     @Value("${app.upload.dir:uploads}")

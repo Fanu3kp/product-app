@@ -41,7 +41,7 @@ public class DataLoader {
                 p1.setPrice(new BigDecimal("3.33"));
                 p1.setCategory("Electronics");
                 p1.setStock(50);
-                p1.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/wireless-mouse.jpg");
+                p1.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/wireless-mouse.jpg");
                 productRepository.save(p1);
 
                 Product p2 = new Product();
@@ -50,7 +50,7 @@ public class DataLoader {
                 p2.setPrice(new BigDecimal("89.99"));
                 p2.setCategory("Electronics");
                 p2.setStock(30);
-                p2.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/mechanical-keyboard.jpg");
+                p2.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/mechanical-keyboard.jpg");
                 productRepository.save(p2);
 
                 Product p3 = new Product();
@@ -59,7 +59,7 @@ public class DataLoader {
                 p3.setPrice(new BigDecimal("13.33"));
                 p3.setCategory("Electronics");
                 p3.setStock(40);
-                p3.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/usb-c-hub.jpg");
+                p3.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/usb-c-hub.jpg");
                 productRepository.save(p3);
 
                 Product p4 = new Product();
@@ -68,7 +68,7 @@ public class DataLoader {
                 p4.setPrice(new BigDecimal("23.33"));
                 p4.setCategory("Home");
                 p4.setStock(25);
-                p4.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/coffee-maker.jpg");
+                p4.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/coffee-maker.jpg");
                 productRepository.save(p4);
 
                 Product p5 = new Product();
@@ -77,7 +77,7 @@ public class DataLoader {
                 p5.setPrice(new BigDecimal("6.67"));
                 p5.setCategory("Sports");
                 p5.setStock(60);
-                p5.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/yoga-mat.jpg");
+                p5.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/yoga-mat.jpg");
                 productRepository.save(p5);
 
                 Product p6 = new Product();
@@ -86,7 +86,7 @@ public class DataLoader {
                 p6.setPrice(new BigDecimal("39.99"));
                 p6.setCategory("Electronics");
                 p6.setStock(35);
-                p6.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/bluetooth-speaker.jpg");
+                p6.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/bluetooth-speaker.jpg");
                 productRepository.save(p6);
 
                 Product p7 = new Product();
@@ -95,7 +95,7 @@ public class DataLoader {
                 p7.setPrice(new BigDecimal("26.67"));
                 p7.setCategory("Electronics");
                 p7.setStock(20);
-                p7.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/smartwatch.jpg");
+                p7.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/smartwatch.jpg");
                 productRepository.save(p7);
 
                 Product p8 = new Product();
@@ -104,7 +104,7 @@ public class DataLoader {
                 p8.setPrice(new BigDecimal("6.67"));
                 p8.setCategory("Sports");
                 p8.setStock(30);
-                p8.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/backpack.jpg");
+                p8.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/backpack.jpg");
                 productRepository.save(p8);
 
                 Product p9 = new Product();
@@ -113,7 +113,7 @@ public class DataLoader {
                 p9.setPrice(new BigDecimal("3.67"));
                 p9.setCategory("Sports");
                 p9.setStock(45);
-                p9.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/running-shoes.jpg");
+                p9.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/running-shoes.jpg");
                 productRepository.save(p9);
 
                 Product p10 = new Product();
@@ -122,7 +122,7 @@ public class DataLoader {
                 p10.setPrice(new BigDecimal("2.00"));
                 p10.setCategory("Home");
                 p10.setStock(40);
-                p10.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/desk-lamp.jpg");
+                p10.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/desk-lamp.jpg");
                 productRepository.save(p10);
 
                 Product p11 = new Product();
@@ -131,7 +131,7 @@ public class DataLoader {
                 p11.setPrice(new BigDecimal("40.00"));
                 p11.setCategory("Home");
                 p11.setStock(15);
-                p11.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/cookware-set.jpg");
+                p11.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/cookware-set.jpg");
                 productRepository.save(p11);
 
                 Product p12 = new Product();
@@ -140,7 +140,7 @@ public class DataLoader {
                 p12.setPrice(new BigDecimal("10.00"));
                 p12.setCategory("Sports");
                 p12.setStock(55);
-                p12.setImageUrl("https://product-app-backend-v46b.onrender.com/uploads/sunglasses.jpg");
+                p12.setImageUrl("https://product-app-backend-v46b.onrender.com/api/images/sunglasses.jpg");
                 productRepository.save(p12);
             }
         };
