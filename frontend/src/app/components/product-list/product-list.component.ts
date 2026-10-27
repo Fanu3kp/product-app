@@ -3,6 +3,7 @@ import { ProductService } from '../../services/product.service';
 import { OrderService } from '../../services/order.service';
 import { AuthService } from '../../services/auth.service';
 import { Product, OrderRequest } from '../../models';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-product-list',
@@ -64,7 +65,7 @@ export class ProductListComponent implements OnInit {
     if (!imageUrl) return '';
     const parts = imageUrl.split('/');
     const filename = parts[parts.length - 1];
-    return '/api/images/' + filename;
+    return environment.apiUrl + '/api/images/' + filename;
   }
 
   onCategoryChange(): void {
