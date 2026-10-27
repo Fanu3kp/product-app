@@ -6,13 +6,9 @@ import com.productapp.backend.dto.RegisterRequest;
 import com.productapp.backend.entity.Role;
 import com.productapp.backend.entity.User;
 import com.productapp.backend.repository.UserRepository;
-import com.productapp.backend.config.SecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,9 +19,6 @@ import java.util.Optional;
 public class AuthController {
 
     @Autowired
-    private AuthenticationManager authenticationManager;
-
-    @Autowired
     private UserRepository userRepository;
 
     @Autowired
@@ -33,14 +26,11 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
-        Authentication authentication = authenticationManager.authenticate(
-            new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
-        );
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-
-        User user = userRepository.findByUsername(request.getUsername())
-            .orElseThrow(() -> new RuntimeException("User not found"));
-
+        Optional<User> userOpt = userRepository.findByUsername(request.getUsername());
+        if (userOpt.isEmpty() || !passwordEncoder.matches(request.getPassword(), userOpt.get().getPassword())) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
+        }
+        User user = userOpt.get();
         return ResponseEntity.ok(new AuthResponse("dummy-token", user.getUsername(), user.getRole().name()));
     }
 
@@ -51,7 +41,7 @@ public class AuthController {
         }
 
         Role role = request.getRole() != null && request.getRole().equalsIgnoreCase("ADMIN")
-            ? Role.ADMIN : Role.USER;
+                ? Role.ADMIN : Role.USER;
 
         User user = new User(null, request.getUsername(), passwordEncoder.encode(request.getPassword()),
             request.getEmail(), role);

@@ -72,5 +72,5 @@ export class AuthService {
 }
 
 export function initAuth(authService: AuthService) {
-  return () => authService.autoLoginAsAdmin().toPromise();
+  return () => authService.autoLoginAsAdmin().catch(() => null);
 }
