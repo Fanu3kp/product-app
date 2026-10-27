@@ -1,0 +1,25 @@
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+
+# uploads (runtime files)
+uploads/
+
+# environment secrets
+!src/main/resources/application.properties
