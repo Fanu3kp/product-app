@@ -1,5 +1,6 @@
 target/
 !target/backend-1.0.0.jar
+!backend-1.0.0.jar
 *.class
 *.war
 *.ear
