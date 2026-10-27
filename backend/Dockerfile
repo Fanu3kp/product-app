@@ -1,11 +1,7 @@
-FROM openjdk:17-jdk-slim as builder
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
-RUN apt-get update && apt-get install -y maven && mvn package -DskipTests
-
-FROM openjdk:17-jdk-slim
-WORKDIR /app
-COPY --from=builder /app/target/backend-1.0.0.jar app.jar
+RUN apk add --no-cache maven && mvn package -DskipTests && apk del maven
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "target/backend-1.0.0.jar"]
