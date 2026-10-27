@@ -41,7 +41,7 @@ public class ImageController {
         }
 
         return ResponseEntity.ok()
-            .contentType(MediaType.imageSvgXml)
+            .contentType(MediaType.parseMediaType("image/svg+xml"))
             .header(HttpHeaders.CACHE_CONTROL, "max-age=86400")
             .body(getPlaceholderSvg(filename).getBytes());
     }

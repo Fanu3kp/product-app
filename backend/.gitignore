@@ -23,3 +23,4 @@ uploads/
 
 # environment secrets
 !src/main/resources/application.properties
+!backend-1.0.0.jar
