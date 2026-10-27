@@ -60,6 +60,13 @@ export class ProductListComponent implements OnInit {
     return this.products.filter(p => p.category === this.selectedCategory);
   }
 
+  getImageUrl(imageUrl: string): string {
+    if (!imageUrl) return '';
+    const parts = imageUrl.split('/');
+    const filename = parts[parts.length - 1];
+    return '/api/images/' + filename;
+  }
+
   onCategoryChange(): void {
     // Filter is computed via filteredProducts getter
   }
