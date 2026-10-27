@@ -1,7 +1,8 @@
 import { Injectable, APP_INITIALIZER } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { Observable, BehaviorSubject, of } from 'rxjs';
+import { tap, catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 import { AuthResponse } from '../models';
 import { environment } from '../../environments/environment';
 
@@ -72,5 +73,5 @@ export class AuthService {
 }
 
 export function initAuth(authService: AuthService) {
-  return () => authService.autoLoginAsAdmin().catch(() => null);
+  return () => authService.autoLoginAsAdmin().pipe(catchError(() => of(null))).toPromise();
 }
