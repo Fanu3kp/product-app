@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#fce4ec"/>
+  <rect x="120" y="100" width="60" height="80" rx="8" fill="#e91e63"/>
+  <circle cx="150" cy="150" r="35" fill="#880e4f"/>
+  <rect x="135" y="135" width="30" height="20" rx="4" fill="#f8bbd0"/>
+  <circle cx="150" cy="160" r="4" fill="#f8bbd0"/>
+  <text x="150" y="220" font-family="Arial" font-size="14" fill="#880e4f" text-anchor="middle">&#9728;</text>
+  <text x="150" y="260" font-family="Arial" font-size="16" fill="#c2185b" text-anchor="middle">Smartwatch</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#eceff1"/>
+  <ellipse cx="150" cy="140" rx="70" ry="50" fill="#607d8b"/>
+  <ellipse cx="150" cy="120" rx="55" ry="40" fill="#78909c"/>
+  <line x1="150" y1="70" x2="150" y2="120" stroke="#455a64" stroke-width="4"/>
+  <circle cx="150" cy="140" r="8" fill="#cfd8dc"/>
+  <text x="150" y="250" font-family="Arial" font-size="16" fill="#455a64" text-anchor="middle">Sunglasses</text>
+</svg>

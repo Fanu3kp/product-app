@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#e8f5e9"/>
+  <circle cx="150" cy="110" r="45" fill="#4caf50"/>
+  <rect cx="150" cy="190" width="70" height="40" x="115" y="170" rx="8" fill="#66bb6a"/>
+  <circle cx="130" cy="120" r="8" fill="#fff"/>
+  <circle cx="170" cy="120" r="8" fill="#fff"/>
+  <text x="150" y="250" font-family="Arial" font-size="16" fill="#2e7d32" text-anchor="middle">Wireless Mouse</text>
+</svg>

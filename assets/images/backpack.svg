@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#fff8e1"/>
+  <rect x="90" y="100" width="120" height="130" rx="12" fill="#ffeb3b"/>
+  <rect x="105" y="130" width="20" height="50" rx="4" fill="#fbc02d"/>
+  <rect x="175" y="130" width="20" height="50" rx="4" fill="#fbc02d"/>
+  <rect x="110" y="180" width="80" height="10" rx="4" fill="#fbc02d"/>
+  <rect x="125" y="200" width="20" height="10" rx="3" fill="#fbc02d"/>
+  <rect x="155" y="200" width="20" height="10" rx="3" fill="#fbc02d"/>
+  <text x="150" y="260" font-family="Arial" font-size="16" fill="#f57f17" text-anchor="middle">Backpack</text>
+</svg>
