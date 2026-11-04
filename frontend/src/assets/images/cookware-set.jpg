@@ -83,7 +83,7 @@
 
 <script>
     window.dataLayer = window.dataLayer || [];
-    dataLayer.push({"environment":"production","demandwareID":"ab0vo3FiavwOPZIyYhBdBtoUVI","loggedInState":false,"locale":"en_US","currencyCode":"USD","pageLanguage":"en_US","registered":false,"emailHash":"","user_id":""});
+    dataLayer.push({"environment":"production","demandwareID":"abobDDsttGYa6gCHev13QvXPxy","loggedInState":false,"locale":"en_US","currencyCode":"USD","pageLanguage":"en_US","registered":false,"emailHash":"","user_id":""});
 </script>
 
 <!-- Google Tag Manager -->
@@ -111,7 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			function riskifiedBeaconLoad() {
 				
 				var store_domain = 'cuisinart.com_us';
-				var session_id = 'Am_o6acpaCHyU1q_-ZU0PGQ4UqrQtU2GIOc=';
+				var session_id = 'wjR083MSEYkYK7eNpTUfcrOaHuLguNMS23k=';
 				var url = ('https:' == document.location.protocol ? 'https://'
 						: 'http://')
 						+ "beacon.riskified.com?shop="
@@ -4424,7 +4424,7 @@ document.getElementsByClassName("simple-search-form")[0].addEventListener("submi
 			function riskifiedBeaconLoad() {
 				
 				var store_domain = 'cuisinart.com_us';
-				var session_id = 'Am_o6acpaCHyU1q_-ZU0PGQ4UqrQtU2GIOc=';
+				var session_id = 'wjR083MSEYkYK7eNpTUfcrOaHuLguNMS23k=';
 				var url = ('https:' == document.location.protocol ? 'https://'
 						: 'http://')
 						+ "beacon.riskified.com?shop="
@@ -4801,7 +4801,7 @@ document.getElementsByClassName("simple-search-form")[0].addEventListener("submi
     data-rejectText="No"
     data-heading="Tracking Consent"
     data-tokenName="csrf_token"
-    data-token="jVVIRCK-Sxb8wlN4adGnWV_iDoniS0C5-BdXBMldGX23SxOWSc6avAX6E-IinNcaoviYfq2NHKPpUj0792k_Ube_xyxZYv6mMB4pDeJtjZNNkhm0iM7vUh7dEb_8rCp6V4kPGHVInGwzOK6ir5TROCWX2r8EjD20v8RuEa--L0EX1vDrP8g="
+    data-token="NmwJfSgVpfkKjqcCzjWWwJ4PVm_EwNs4TKUSLFxOFFPxqnPnNtdHjoOadC3bjnpp0gcR1T7GJzzsRlH_n5vdzmw5gd2CxhbrYblj04_fgGkOCYLsRH7RvgZK8eKU9L5qrNirjjEDfJOCWwa_AGvElFXotck1_kLbmDJSRVnPz3WTkJhQitU="
     ></span>
 
 <!-- Demandware Analytics code 1.0 (body_end-analytics-tracking-asynch.js) -->
