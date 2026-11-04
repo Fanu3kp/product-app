@@ -65,7 +65,7 @@ export class ProductListComponent implements OnInit {
     if (!imageUrl) return '';
     const parts = imageUrl.split('/');
     const filename = parts[parts.length - 1];
-    return environment.apiUrl + '/api/images/' + filename;
+    return 'assets/images/' + filename;
   }
 
   onCategoryChange(): void {
