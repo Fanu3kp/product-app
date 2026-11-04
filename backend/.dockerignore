@@ -10,5 +10,4 @@ target/
 .DS_Store
 Thumbs.db
 *.log
-uploads/
 node_modules/
