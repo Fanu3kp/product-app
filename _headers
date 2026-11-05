@@ -1,0 +1,17 @@
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/main.*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/polyfills.*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/runtime.*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/styles.*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
